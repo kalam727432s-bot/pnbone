@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            android:translationZ="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_bottom_bg">
+
+            <TextView
+                android:id="@+id/slidingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punjab National Bank"
+                android:textSize="22sp"
+                android:textColor="@color/primary1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        <com.denzcoskun.imageslider.ImageSlider
+
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:iss_auto_cycle="true"
+            app:iss_period="1000"
+            app:iss_unselected_dot="@drawable/default_unselected_dot"
+            app:iss_delay="1000"
+            app:iss_text_align="CENTER"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Footer Image -->
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_logo"
+            android:contentDescription="PNB Logo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/primary">
+
+            <!-- Form Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Full Name"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:background="@drawable/input_rounded"
+                    android:layout_marginBottom="20dp"/>
+
+
+                <EditText
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:maxLength="10"
+                    android:background="@drawable/input_rounded"
+                    android:layout_marginBottom="20dp"/>
+
+                <EditText
+                    android:id="@+id/accountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Account Number"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:background="@drawable/input_rounded"
+                    android:layout_marginBottom="20dp"/>
+
+                <EditText
+                    android:id="@+id/dob22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:maxLength="10"
+                    android:background="@drawable/input_rounded"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Next Button -->
+                <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN"
+                    android:background="@drawable/rounded"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:padding="12dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secure@Punjab National Bank. All Rights Reserved."
+
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

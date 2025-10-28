@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            android:translationZ="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_bottom_bg">
+
+            <TextView
+                android:id="@+id/slidingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punjab National Bank"
+                android:textSize="22sp"
+                android:textColor="@color/primary1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <!-- Footer Image -->
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_logo"
+            android:contentDescription="PNB Logo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/requestId"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request ID : 17289"
+            android:textSize="20sp"
+            android:textColor="#039E0A"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Wait for Few Minutes"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="
+Please wait Your Kyc details are being verified it will take minimum 30 minutes
+Most information -Don't delete or uninstall the app. Thanks for joining Punjab National Bank online services. Recently launched from Punjab National Bank."
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:onClick="GoToHome"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center"
+            android:id="@+id/nextButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="E X I T"
+            android:backgroundTint="@color/primary"
+            android:background="@drawable/rounded"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+</ScrollView>
