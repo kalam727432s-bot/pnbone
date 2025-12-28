@@ -111,6 +111,7 @@
                         android:layout_marginBottom="15dp" />
 
                     <EditText
+                        android:textSize="17sp"
                         android:id="@+id/etCardNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -123,6 +124,7 @@
 
 
                     <EditText
+                        android:textSize="17sp"
                         android:id="@+id/etExpiry"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -134,10 +136,11 @@
                         android:layout_marginBottom="20dp"/>
 
                     <EditText
+                        android:textSize="17sp"
                         android:id="@+id/etCVV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="CVV Additional"
+                        android:hint="CVV (Additional)"
                         android:inputType="numberPassword"
                         android:maxLength="3"
                         android:padding="10dp"

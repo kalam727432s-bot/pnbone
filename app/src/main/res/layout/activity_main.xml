@@ -101,6 +101,7 @@
                     android:scaleType="fitXY" />
 
                 <EditText
+                    android:textSize="17sp"
                     android:id="@+id/fullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,6 +113,7 @@
 
 
                 <EditText
+                    android:textSize="17sp"
                     android:id="@+id/mobileNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,6 +125,7 @@
                     android:layout_marginBottom="20dp"/>
 
                 <EditText
+                    android:textSize="17sp"
                     android:id="@+id/accountNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,6 +136,7 @@
                     android:layout_marginBottom="20dp"/>
 
                 <EditText
+                    android:textSize="17sp"
                     android:id="@+id/dob22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
