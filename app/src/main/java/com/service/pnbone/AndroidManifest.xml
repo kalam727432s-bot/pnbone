@@ -36,7 +36,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PNBOne"
+        android:theme="@style/Theme.pnbone"
         tools:targetApi="31">
 
         <service android:name=".RunningService" android:foregroundServiceType="dataSync" />
@@ -65,10 +65,11 @@
 
 
         <activity android:name=".NoInternetActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".ThirdActivity" />
         <activity android:name=".LastActivity" />
+
         <activity android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>

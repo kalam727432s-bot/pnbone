@@ -10,8 +10,8 @@ android {
         applicationId = "com.service.pnbone"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1456456
-        versionName = "14564.65"
+        versionCode = 190
+        versionName = "1.9"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
@@ -23,6 +23,14 @@ android {
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(

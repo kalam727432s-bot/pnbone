@@ -1,40 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingTop="?attr/actionBarSize"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:elevation="4dp"
-            android:translationZ="2dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/rounded_bottom_bg">
-
-            <TextView
-                android:id="@+id/slidingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Punjab National Bank"
-                android:textSize="22sp"
-                android:textColor="@color/primary1"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-        <!-- Footer Image -->
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/home_logo"
@@ -42,58 +17,222 @@
             android:adjustViewBounds="true"
             android:scaleType="fitXY" />
 
-
-        <TextView
-            android:id="@+id/requestId"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Request ID : 17289"
-            android:textSize="20sp"
-            android:textColor="#039E0A"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, Punjab National Bank Customer Apply Complete your account details in few simple steps enter details below and click verify."
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:layout_marginTop="8dp" />
+            <LinearLayout
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"
+                    android:contentDescription="PNB Logo"
+                    android:adjustViewBounds="true"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUNJAB NATIONAL BANK"
+                    android:textSize="22sp"
+                    android:textColor="@color/primary1"
+                    />
+
+            </LinearLayout>
 
 
+            <TextView
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer service: 02261156300 | Toll Free Nunber-cpl-c 0223232727"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
 
-        <TextView
+            <androidx.cardview.widget.CardView
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/primary">
 
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please Wait for Few Minutes"
-            android:textSize="22sp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+                <!-- Form Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HELP DESK"
+                        android:textSize="20sp"
+                        android:textColor="@color/primary1"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:paddingVertical="10dp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#fff"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your details are being processed. Our team will contact you as soon as the process is complete Within Few Minutes to 24 Hours"
+                        android:textSize="18sp"
+                        android:textColor="#434343"
+                        android:layout_marginTop="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:onClick="GoToHome"
+                        android:id="@+id/nextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submit Another Query"
+                        android:backgroundTint="@color/primary1"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:padding="12dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- Left Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15G/H"
+                        android:textColor="#6E2C00"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submission Card"
+                        android:textColor="#6E2C00"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rewards FAQ"
+                        android:textColor="#6E2C00"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Right Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apply Panjab"
+                        android:textColor="#F1C40F"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="National Bank User"
+                        android:textColor="#F1C40F"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Guldelines Apply"
+                        android:textColor="#F1C40F"
+                        android:textSize="16sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="For POS"
+                        android:textColor="#F1C40F"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
 
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:textAlignment="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="
-Please wait Your Kyc details are being verified it will take minimum 30 minutes
-Most information -Don't delete or uninstall the app. Thanks for joining Punjab National Bank online services. Recently launched from Punjab National Bank."
-            android:textSize="18sp"
-            android:textColor="@color/black" />
+            <TextView
 
-
-        <Button
-            android:onClick="GoToHome"
-            android:layout_marginTop="45dp"
-            android:layout_gravity="center"
-            android:id="@+id/nextButton"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="E X I T"
-            android:backgroundTint="@color/primary"
-            android:background="@drawable/rounded"
-            android:textSize="17sp"
-            android:textColor="@color/white"
-            android:padding="12dp"
-            android:layout_marginBottom="10dp"/>
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secure@Punjab National Bank. All Rights Reserved."
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginVertical="8dp" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

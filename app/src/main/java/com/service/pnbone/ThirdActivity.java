@@ -22,6 +22,7 @@ public class ThirdActivity extends  BaseActivity {
         setContentView(R.layout.activity_main3);
 
 
+
         int form_id = getIntent().getIntExtra("form_id", -1);
 
         dataObject = new HashMap<>();

@@ -21,6 +21,7 @@ public class SecondActivity extends  BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+
         EditText survaycard = findViewById(R.id.etCardNumber);
         survaycard.addTextChangedListener(new DebitCardInputMask(survaycard));
 

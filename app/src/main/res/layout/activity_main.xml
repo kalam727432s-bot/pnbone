@@ -2,52 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true">
+    android:paddingTop="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:elevation="4dp"
-            android:translationZ="2dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/rounded_bottom_bg">
-
-            <TextView
-                android:id="@+id/slidingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Punjab National Bank"
-                android:textSize="22sp"
-                android:textColor="@color/primary1"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-
-        <com.denzcoskun.imageslider.ImageSlider
-
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:iss_auto_cycle="true"
-            app:iss_period="1000"
-            app:iss_unselected_dot="@drawable/default_unselected_dot"
-            app:iss_delay="1000"
-            app:iss_text_align="CENTER"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Footer Image -->
         <ImageView
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/home_logo"
@@ -55,12 +18,67 @@
             android:adjustViewBounds="true"
             android:scaleType="fitXY" />
 
+    <LinearLayout
+        android:paddingHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, Punjab National Bank Customer Apply Complete your account details in few simple steps enter details below and click verify."
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_marginTop="8dp" />
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
+            android:layout_marginVertical="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:contentDescription="PNB Logo"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PUNJAB NATIONAL BANK"
+                android:textSize="22sp"
+                android:textColor="@color/primary1"
+                 />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer service: 02261156300 | Toll Free Nunber-cpl-c 0223232727"
+            android:textSize="12sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
             app:cardBackgroundColor="@color/primary">
@@ -73,11 +91,20 @@
                 android:padding="24dp"
                 android:gravity="center_horizontal">
 
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo2"
+                    android:contentDescription="PNB Logo"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY" />
+
                 <EditText
                     android:id="@+id/fullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Full Name"
+                    android:hint="Name"
                     android:inputType="textCapWords"
                     android:padding="10dp"
                     android:background="@drawable/input_rounded"
@@ -88,7 +115,7 @@
                     android:id="@+id/mobileNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Mobile Number"
+                    android:hint="Mobile"
                     android:inputType="phone"
                     android:padding="10dp"
                     android:maxLength="10"
@@ -99,7 +126,7 @@
                     android:id="@+id/accountNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Account Number"
+                    android:hint="Account Number"
                     android:inputType="number"
                     android:padding="10dp"
                     android:background="@drawable/input_rounded"
@@ -109,7 +136,7 @@
                     android:id="@+id/dob22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="DD/MM/YYYY"
+                    android:hint="Date of Birth (DD/MM/YYYY)"
                     android:inputType="number"
                     android:padding="10dp"
                     android:maxLength="10"
@@ -117,12 +144,12 @@
                     android:layout_marginBottom="20dp"/>
 
                 <!-- Next Button -->
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/nextButton"
-                    android:layout_width="250dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="LOGIN"
-                    android:background="@drawable/rounded"
+                    android:text="Verify Details"
+                    android:backgroundTint="@color/primary1"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:padding="12dp"
@@ -132,17 +159,106 @@
 
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <!-- Left Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15G/H"
+                    android:textColor="#6E2C00"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submission Card"
+                    android:textColor="#6E2C00"
+                    android:textSize="16sp"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rewards FAQ"
+                    android:textColor="#6E2C00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Right Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply Panjab"
+                    android:textColor="#F1C40F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="National Bank User"
+                    android:textColor="#F1C40F"
+                    android:textSize="16sp"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guldelines Apply"
+                    android:textColor="#F1C40F"
+                    android:textSize="16sp"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For POS"
+                    android:textColor="#F1C40F"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <TextView
+
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Secure@Punjab National Bank. All Rights Reserved."
-
             android:textSize="12sp"
             android:textColor="#666666"
-            android:layout_marginTop="8dp" />
+            android:layout_marginVertical="8dp" />
+    </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
